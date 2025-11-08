@@ -13,7 +13,7 @@
     <meta property="og:description" content="High-impact, product-based digital services and scalable custom software solutions">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sanket-hp.github.io/trinetra-website">
-    <meta property="og:image" content="https://sanket-hp.github.io/trinetra-website/assets/trinetra-logo.jpg">
+    <!-- <meta property="og:image" content="https://sanket-hp.github.io/trinetra-website/assets/trinetra-logo.jpg"> -->
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +30,7 @@
         "@type": "Organization",
         "name": "Trinetra",
         "url": "https://sanket-hp.github.io/trinetra-website",
-        "logo": "https://sanket-hp.github.io/trinetra-website/assets/trinetra-logo.jpg",
+        // "logo": "https://sanket-hp.github.io/trinetra-website/assets/trinetra-logo.jpg",
         "description": "Digital solutions and custom software development company",
         "address": {
             "@type": "PostalAddress",
@@ -124,6 +124,22 @@
         .toast.error {
             background: #ef4444;
         }
+        .logo-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .image-placeholder {
+            background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            border: 2px dashed #d1d5db;
+        }
     </style>
 </head>
 <body class="font-inter bg-light text-dark">
@@ -134,7 +150,10 @@
     <header class="sticky top-0 z-50 bg-white shadow-sm">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="assets/trinetra-logo.jpg" alt="Trinetra Logo - Digital Solutions Company" class="h-10 w-10 rounded-full">
+                <!-- Trinetra Logo with fallback -->
+                <div class="h-10 w-10 rounded-full logo-placeholder flex items-center justify-center">
+                    T
+                </div>
                 <span class="ml-2 text-xl font-bold">Trinetra</span>
             </div>
             
@@ -231,7 +250,10 @@
                 <div class="md:flex">
                     <div class="md:w-1/2 p-8 md:p-12">
                         <div class="flex items-center mb-6">
-                            <img src="assets/go-route-logo.jpg" alt="GoRoute Bus Booking Bot Logo" class="h-12 w-12 rounded-lg">
+                            <!-- GoRoute Logo with fallback -->
+                            <div class="h-12 w-12 rounded-lg logo-placeholder flex items-center justify-center">
+                                GR
+                            </div>
                             <h3 class="text-2xl md:text-3xl font-bold ml-4">GoRoute Bus Booking Bot</h3>
                         </div>
                         <p class="text-gray-600 mb-6">
@@ -302,17 +324,38 @@
                             <div class="lg:w-1/2">
                                 <h4 class="text-lg font-semibold mb-4 text-center">GoRoute in Action</h4>
                                 <div class="grid grid-cols-2 gap-4">
+                                    <!-- GoRoute interface screenshots with fallbacks -->
                                     <div class="bg-white rounded-lg shadow p-2">
-                                        <img src="assets/go-route-1.jpg" alt="GoRoute Bus Booking Interface - User Dashboard" class="w-full h-auto rounded">
+                                        <div class="w-full h-32 image-placeholder rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <i class="fas fa-user text-2xl text-gray-400 mb-2"></i>
+                                                <p class="text-sm text-gray-500">User Dashboard</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="bg-white rounded-lg shadow p-2">
-                                        <img src="assets/go-route-2.jpg" alt="GoRoute Bus Booking Interface - Route Management" class="w-full h-auto rounded">
+                                        <div class="w-full h-32 image-placeholder rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <i class="fas fa-route text-2xl text-gray-400 mb-2"></i>
+                                                <p class="text-sm text-gray-500">Route Management</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="bg-white rounded-lg shadow p-2">
-                                        <img src="assets/go-route-3.jpg" alt="GoRoute Bus Booking Interface - Payment System" class="w-full h-auto rounded">
+                                        <div class="w-full h-32 image-placeholder rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <i class="fas fa-credit-card text-2xl text-gray-400 mb-2"></i>
+                                                <p class="text-sm text-gray-500">Payment System</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="bg-white rounded-lg shadow p-2">
-                                        <img src="assets/go-route-4.jpg" alt="GoRoute Bus Booking Interface - Booking Confirmation" class="w-full h-auto rounded">
+                                        <div class="w-full h-32 image-placeholder rounded flex items-center justify-center">
+                                            <div class="text-center">
+                                                <i class="fas fa-check-circle text-2xl text-gray-400 mb-2"></i>
+                                                <p class="text-sm text-gray-500">Booking Confirmation</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <p class="text-center text-gray-600 mt-4 text-sm">Telegram-based interface for seamless bus booking experience</p>
@@ -323,7 +366,12 @@
                                 <p class="text-gray-600 text-center mb-4">Scan the QR code to open the bot directly in Telegram</p>
                                 
                                 <div class="qr-code-container bg-white p-4 rounded-lg shadow-lg">
-                                    <img src="assets/go-route-bus-telegram-qr-code.jpg" alt="GoRoute Telegram QR Code - Scan to open bus booking bot" class="w-full h-auto rounded">
+                                    <!-- QR Code with fallback -->
+                                    <div class="w-full h-64 image-placeholder rounded flex flex-col items-center justify-center">
+                                        <i class="fas fa-qrcode text-4xl mb-2 text-gray-400"></i>
+                                        <span class="text-sm text-gray-500">QR Code</span>
+                                        <span class="text-xs text-gray-400 mt-1">Scan with Telegram</span>
+                                    </div>
                                 </div>
                                 
                                 <p class="text-center text-gray-600 mt-4 text-sm">or</p>
@@ -474,7 +522,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="assets/trinetra-logo.jpg" alt="Trinetra Logo" class="h-10 w-10 rounded-full">
+                        <!-- Footer logo with fallback -->
+                        <div class="h-10 w-10 rounded-full logo-placeholder flex items-center justify-center">
+                            T
+                        </div>
                         <span class="ml-2 text-xl font-bold">Trinetra</span>
                     </div>
                     <p class="text-gray-400 mb-4">
@@ -632,25 +683,6 @@
                 }, 300);
             }, 5000);
         }
-
-        // Track form submissions (optional analytics)
-        document.getElementById('contact-form').addEventListener('submit', function() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'contact_form_submit', {
-                    'event_category': 'engagement',
-                    'event_label': 'Contact Form'
-                });
-            }
-        });
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
     </script>
 </body>
 </html>
