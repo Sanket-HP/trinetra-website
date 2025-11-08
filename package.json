@@ -1,0 +1,11 @@
+{
+  "name": "trinetra-website",
+  "version": "1.0.0",
+  "description": "Trinetra Digital Solutions Website",
+  "scripts": {
+    "deploy": "firebase deploy"
+  },
+  "keywords": ["digital solutions", "software development", "trinetra"],
+  "author": "Sanket Sarjerao Patil",
+  "license": "MIT"
+}

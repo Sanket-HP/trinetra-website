@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sanket-hp.github.io/trinetra-website/sitemap.xml
