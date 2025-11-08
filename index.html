@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trinetra - Digital Solutions & Custom Software Development</title>
 
+    <!-- Bing Webmaster Tools Verification -->
     <meta name="msvalidate.01" content="5A588B0D8F167F94B711C28AB9E38E9D" />
 
     <meta name="description" content="Trinetra delivers high-impact, product-based digital services and scalable custom software solutions. Specialists in logistics, payment systems, and multi-role platforms.">
@@ -25,6 +26,68 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://sanket-hp.github.io/trinetra-website">
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JE238VKH5J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JE238VKH5J');
+        
+        // Enhanced tracking for Trinetra
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track contact form submissions
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function() {
+                    gtag('event', 'contact_form_submit', {
+                        'event_category': 'conversion',
+                        'event_label': 'Contact Form'
+                    });
+                });
+            }
+            
+            // Track demo request clicks
+            document.querySelectorAll('a[href="#contact"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    gtag('event', 'demo_request_click', {
+                        'event_category': 'engagement', 
+                        'event_label': 'Request Demo'
+                    });
+                });
+            });
+            
+            // Track Telegram bot clicks
+            document.querySelectorAll('a[href*="t.me/GoRouteBusBot"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'telegram_bot_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'GoRoute Bot'
+                    });
+                });
+            });
+
+            // Track section views
+            const sections = ['home', 'about', 'products', 'services', 'contact'];
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        gtag('event', 'section_view', {
+                            'event_category': 'engagement',
+                            'event_label': entry.target.id
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) observer.observe(element);
+            });
+        });
+    </script>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
